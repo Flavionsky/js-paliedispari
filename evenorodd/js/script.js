@@ -38,21 +38,13 @@ numMyEl.innerHTML = ("mio numero " + myNumEl);
 numPc.innerHTML = ("numero pc " + pcNumberEl);
 oddOrEven = evenOdd(pcNumberEl, myNumEl);
 addNumEl.innerHTML = ("la somma è " + oddOrEven);
-if(pariDispariEl == "even" && oddOrEven == "pari"){
+if(pariDispariEl == oddOrEven){
 
   winMessageEl.innerHTML = "Hai vinto!";
 
-} else if(pariDispariEl == "even" && oddOrEven == "dispari"){
+} else{
 
   winMessageEl.innerHTML = "ha vinto il pc!";
 
-} else if(pariDispariEl == "odd" && oddOrEven == "dispari"){
-
-  winMessageEl.innerHTML = "Hai vinto!";
-
-} else if(pariDispariEl == "odd" && oddOrEven == "pari"){
-
-  winMessageEl.innerHTML = "ha vinto il pc!";
 }
-
 });
