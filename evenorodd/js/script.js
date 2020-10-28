@@ -4,11 +4,11 @@ function getRandom(min, max) {
 		max = Math.floor(max);
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-//definisco la funzione che mi verifica se la somma è pari o Dispari
-function evenOdd(num1, num2){
-  var add = parseInt(num1) + parseInt(num2);
+//definisco la funzione che mi verifica se il numero è pari o dispari
+function evenOdd(number){
+  var number;
   var result;
-  if(add % 2 == 0){
+  if(number % 2 == 0){
     result = "pari";
   } else {
     result= "dispari";
@@ -40,7 +40,7 @@ if(myNumEl > 5 || myNumEl < 1){
   //faccio la somma dei due numeri e verifico se siano pari o Dispari
   numMyEl.innerHTML = ("mio numero " + myNumEl);
   numPc.innerHTML = ("numero pc " + pcNumberEl);
-  oddOrEven = evenOdd(pcNumberEl, myNumEl);
+  oddOrEven = evenOdd(parseInt(pcNumberEl) + parseInt(myNumEl));
   addNumEl.innerHTML = ("la somma è " + oddOrEven);
   if(pariDispariEl == oddOrEven){
 

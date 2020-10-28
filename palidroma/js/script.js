@@ -36,8 +36,9 @@
 //
 //
 // });
-//definisco la funzione che mi compara la parola Palindroma
-function isPalindrome(inputWord){
+//definisco la funzione che mi inverte parola/frase
+function reverseWord(inputWord){
+  var inputWord;
   //levo gli spazi nel caso in cui avessimo un frase da esaminare
   var charContainer = inputWord.split(" ").join("");
   //definisco il mio array che conterrà la stringa inversa
@@ -46,9 +47,16 @@ function isPalindrome(inputWord){
   for(var i = charContainer.length - 1; i >= 0; i--){
     charReverse.push(charContainer[i]);
   }
-     var message;
-     //comparo l'array di partenza con l'array inverso
-     if(charReverse.join("") == charContainer){
+  return charReverse.join("");
+}
+//definisco la funzione che mi compara la parola Palindroma
+function isPalindrome(inputWord){
+    var inputWord;
+    var message;
+    //levo gli spazi nel caso in cui avessimo un frase da esaminare
+    var charContainer = inputWord.split(" ").join("");
+     //comparo la parola inversa utilizzando la funzione reverse
+     if(reverseWord(inputWord) == charContainer){
        return message = "è palindroma!";
      } else{
        return message = "non è palindroma";
@@ -64,5 +72,5 @@ checkButtonEl.addEventListener('click', function(){
   var messagePalEl = document.getElementById("messagePal");
   //inserisco il messaggio che uscirà dalla funzione nell'HTML
   messagePalEl.innerHTML = isPalindrome(inputWordEl);
-
+  console.log(reverseWord(inputWordEl));
 });
